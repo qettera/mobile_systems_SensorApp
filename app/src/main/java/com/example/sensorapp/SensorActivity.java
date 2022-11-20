@@ -94,7 +94,7 @@ public class SensorActivity extends AppCompatActivity {
             sensorNameTextView .setText(sensor.getName());
             View itemContainer = itemView.findViewById(R.id.list_item_sensor);
             if (sensor.getType() == Sensor.TYPE_LIGHT || sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY) {
-                itemContainer.setBackgroundColor(getResources().getColor(R.color.lightpink));
+                itemContainer.setBackgroundColor(getResources().getColor(R.color.fioletowy));
                 itemContainer.setOnClickListener(v -> {
                     Intent intent = new Intent(SensorActivity.this, SensorDetailsActivity.class);
                     intent.putExtra(EXTRA_SENSOR_TYPE_PARAMETER, sensor.getType());
@@ -102,7 +102,7 @@ public class SensorActivity extends AppCompatActivity {
                 });
             }
             if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD){
-                itemContainer.setBackgroundColor(getResources().getColor(R.color.lightpink));
+                itemContainer.setBackgroundColor(getResources().getColor(R.color.fioletowy));
                 itemContainer.setOnClickListener(v -> {
                     Intent intent = new Intent(SensorActivity.this, LocationActivity.class);
                     startActivityForResult(intent,LOCATION_ACTIVITY_REQUEST_CODE);
